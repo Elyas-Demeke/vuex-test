@@ -28,8 +28,8 @@
     export default Vue.extend({
        name: 'Form',
        created(){
-           let memos:[{id:String, data:firebase.firestore.DocumentData}] = this.$store.state.memos
-           let mem = memos.find((memo: any) => 
+           let memos = this.$store.state.memos
+           let mem: {id:String, data:any} = memos.find((memo: any) => 
                memo.id === this.$route.params.id
                )
            console.log(mem)
