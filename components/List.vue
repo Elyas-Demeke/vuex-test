@@ -7,7 +7,7 @@
                 </div>
                 <div class="action">
                 <!-- <button style="background: blue;" @click="updateItem(list.id)">Update</button> -->
-                <button style="background: blue;"><nuxt-link :to="'update/'+list.id">Update</nuxt-link></button>
+                <button style="background: #bcbdee;"><nuxt-link :to="'update/'+list.id">Update</nuxt-link></button>
                 <button style="background: red;" @click=deleteItem(list.id)>Delsete</button>                
                 </div>
                 
