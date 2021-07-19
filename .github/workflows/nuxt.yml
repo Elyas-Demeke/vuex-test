@@ -35,9 +35,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       
-       - name: Build and Push Docker image
-         uses: mr-smithers-excellent/docker-build-push@v5
-         with:
+      - name: Build and Push Docker image
+        uses: mr-smithers-excellent/docker-build-push@v5
+        with:
           image: elyasatzeraf/addis
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
