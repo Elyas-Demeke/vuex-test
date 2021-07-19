@@ -62,7 +62,7 @@
                     // console.log(this.$store.state.memos)
                 //    console.log(memo)
                    this.$router.push('/')
-            }).catch((error)=>{
+            }).catch((error:any)=>{
                 console.error("Error writing document:", error)
             })
             

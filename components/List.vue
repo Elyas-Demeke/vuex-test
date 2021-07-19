@@ -36,7 +36,7 @@
         },
         data(){
             return {
-                lists:[],
+                lists:[{id:'', data:Object}],
                 update: 'update/'
             }
         },
@@ -60,13 +60,13 @@
                     this.lists = this.lists.filter(list => list.id != id)
                     this.$store.commit('setMemos', this.lists)
                     console.log(this.$store.state.memos)
-                }).catch((error) => {
+                }).catch((error:any) => {
                 console.error("Error removing document: ", error);
                 });
             },
             updateItem(id: string|undefined){
 
-                firebaseInit.collection('tasks').doc(id).get().then((doc) => {
+                firebaseInit.collection('tasks').doc(id).get().then((doc:any) => {
                     if(doc.exists){
                         this.$emit('memo', doc.data())
                     }else{

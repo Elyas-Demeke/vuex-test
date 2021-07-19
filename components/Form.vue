@@ -37,9 +37,9 @@
             const docRef = db.collection("tasks").doc();
             const docId = docRef.id;
             await docRef.set(memo)
-           .then( doc => {
+           .then( () => {
                     this.$store.commit('addMemo', {id:docId, data: memo})
-            }).catch((error)=>{
+            }).catch((error:any)=>{
                 console.error("Error writing document:", error)
             })
             

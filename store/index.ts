@@ -31,8 +31,8 @@ export const mutations = {
 export const actions = {
    async getMemos(context: any){
     let lists: { id: string; data: firebase.firestore.DocumentData }[] = []
-    await firebaseinit.collection('tasks').get().then(querySnapshot => {
-                querySnapshot.forEach(doc => {
+    await firebaseinit.collection('tasks').get().then((querySnapshot:any) => {
+                querySnapshot.forEach((doc:any) => {
                     lists.push({id:doc.id, data:doc.data()})
                 })            
     })
